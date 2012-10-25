@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo this is a test...
-echo this is another test
-
-if[ 1 > 0 ]
-then
-echo one is greater than zero
-fi
