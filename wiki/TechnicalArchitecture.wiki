@@ -2,15 +2,22 @@
 
 = Introduction =
 
-This is the architecture of the proposed system.
+This is the architecture of the proposed system. Here we discuss the various hardware and/or software components that make up the system
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+*Application Execution*
+Discuss here the application execution context. In the example below you can see the application executes within the Google App Engine. Also, there is a client application running on an Android handset.
 
-https://code.googlecode.com/p/ittqatest/Arch.png
-https://ittqatest.googlecode.com/Arch.png
+*Storage*
+Discuss the storage requirements of the application - 
+  # Relation or flat file storage - on server 
+  # Mobile device local storage or access to stored data on the mobile
+
+*Communications and Protocols*
+Here you will need to discuss the communications layer of your application. For example, we are using Google messaging for Android to send information from the application to the device. You will need to discuss in detail how this is to be done in your application.
+
+= Example Architecture Diagram =
+
+https://ittqatest.googlecode.com/svn/Arch.png
