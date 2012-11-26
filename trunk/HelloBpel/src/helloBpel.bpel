@@ -8,8 +8,24 @@
     xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
-    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling">
-
-   <sequence>
-   </sequence>
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2">
+    <import namespace="http://j2ee.netbeans.org/wsdl/HelloBpel/Hello" location="Hello.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/HelloBpel/Hello" partnerLinkType="tns:Hello" myRole="HelloPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="HelloOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/HelloBpel/Hello" messageType="tns:HelloOperationResponse"/>
+        <variable name="HelloOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/HelloBpel/Hello" messageType="tns:HelloOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="HelloOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/HelloBpel/Hello" portType="tns:HelloPortType" variable="HelloOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from variable="HelloOperationIn" part="part1"/>
+                <to variable="HelloOperationOut" part="part1"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="HelloOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/HelloBpel/Hello" portType="tns:HelloPortType" variable="HelloOperationOut"/>
+    </sequence>
 </process>
+
