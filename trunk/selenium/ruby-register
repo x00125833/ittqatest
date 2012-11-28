@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.ruby-forum.com/" />
+<title>ruby-register-fail</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ruby-register-fail</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/user/register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form_new_user_name</td>
+	<td>bob</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form_new_user_email</td>
+	<td>bob</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form_new_user_firstname</td>
+	<td>bob</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form_new_user_surname</td>
+	<td>bob</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form_new_user_company</td>
+	<td>bob</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_user_captcha_answer</td>
+	<td>bob</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=form_new_user_question_answer</td>
+	<td>55055</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=td.button &gt; input[name=&quot;submit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Account with this user name already exists.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Please enter a valid email address.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Sorry, wrong answer.</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
