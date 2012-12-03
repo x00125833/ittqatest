@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="stockQuote"
+    targetNamespace="http://enterprise.netbeans.org/bpel/StockQuote/stockQuote"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/StockQuote/stockQuote"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2">
+    <import namespace="http://j2ee.netbeans.org/wsdl/StockQuote/StockQuote" location="StockQuote.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/StockQuote/StockQuote" partnerLinkType="tns:StockQuote" myRole="StockQuotePortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="StockQuoteOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/StockQuote/StockQuote" messageType="tns:StockQuoteOperationResponse"/>
+        <variable name="StockQuoteOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/StockQuote/StockQuote" messageType="tns:StockQuoteOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="PartnerLink1" operation="StockQuoteOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/StockQuote/StockQuote" portType="tns:StockQuotePortType" variable="StockQuoteOperationIn"/>
+        <if name="If1">
+            <condition>$StockQuoteOperationIn.symbol = 'MSFT'</condition>
+            <assign name="Assign2">
+                <copy>
+                    <from>'227'</from>
+                    <to variable="StockQuoteOperationOut" part="closingprice"/>
+                </copy>
+                <copy>
+                    <from>'255'</from>
+                    <to variable="StockQuoteOperationOut" part="yearhigh"/>
+                </copy>
+                <copy>
+                    <from>'UP'</from>
+                    <to variable="StockQuoteOperationOut" part="lastmvt"/>
+                </copy>
+                <copy>
+                    <from>'NASDAQ'</from>
+                    <to variable="StockQuoteOperationOut" part="mrkt"/>
+                </copy>
+                <copy>
+                    <from>'YES'</from>
+                    <to variable="StockQuoteOperationOut" part="split"/>
+                </copy>
+            </assign>
+            <else>
+                <if name="If2">
+                    <condition>$StockQuoteOperationIn.symbol = 'ORCL'</condition>
+            <assign name="Assign3">
+                <copy>
+                    <from>'321'</from>
+                    <to variable="StockQuoteOperationOut" part="closingprice"/>
+                </copy>
+                <copy>
+                    <from>'232'</from>
+                    <to variable="StockQuoteOperationOut" part="yearhigh"/>
+                </copy>
+                <copy>
+                    <from>'UP'</from>
+                    <to variable="StockQuoteOperationOut" part="lastmvt"/>
+                </copy>
+                <copy>
+                    <from>'AMX'</from>
+                    <to variable="StockQuoteOperationOut" part="mrkt"/>
+                </copy>
+                <copy>
+                    <from>'YES'</from>
+                    <to variable="StockQuoteOperationOut" part="split"/>
+                </copy>
+            </assign>
+                    <else>
+                        <if name="If3">
+                            <condition>$StockQuoteOperationIn.symbol = 'IBM'</condition>
+            <assign name="Assign4">
+                <copy>
+                    <from>'565'</from>
+                    <to variable="StockQuoteOperationOut" part="closingprice"/>
+                </copy>
+                <copy>
+                    <from>'232'</from>
+                    <to variable="StockQuoteOperationOut" part="yearhigh"/>
+                </copy>
+                <copy>
+                    <from>'DOWNN'</from>
+                    <to variable="StockQuoteOperationOut" part="lastmvt"/>
+                </copy>
+                <copy>
+                    <from>'NASDAQ'</from>
+                    <to variable="StockQuoteOperationOut" part="mrkt"/>
+                </copy>
+                <copy>
+                    <from>'NO'</from>
+                    <to variable="StockQuoteOperationOut" part="split"/>
+                </copy>
+            </assign>
+                            <else>
+                                <if name="If4">
+                                    <condition>$StockQuoteOperationIn.symbol = 'RHT'</condition>
+            <assign name="Assign5">
+                <copy>
+                    <from>'656'</from>
+                    <to variable="StockQuoteOperationOut" part="closingprice"/>
+                </copy>
+                <copy>
+                    <from>'334'</from>
+                    <to variable="StockQuoteOperationOut" part="yearhigh"/>
+                </copy>
+                <copy>
+                    <from>'DOWN'</from>
+                    <to variable="StockQuoteOperationOut" part="lastmvt"/>
+                </copy>
+                <copy>
+                    <from>'NASDAQ'</from>
+                    <to variable="StockQuoteOperationOut" part="mrkt"/>
+                </copy>
+                <copy>
+                    <from>'NO'</from>
+                    <to variable="StockQuoteOperationOut" part="split"/>
+                </copy>
+            </assign>
+                                    <else>
+                                        <assign name="Assign1">
+                                            <copy>
+                                                <from>'0'</from>
+                                                <to variable="StockQuoteOperationOut" part="closingprice"/>
+                                            </copy>
+                                            <copy>
+                                                <from>'0'</from>
+                                                <to variable="StockQuoteOperationOut" part="yearhigh"/>
+                                            </copy>
+                                            <copy>
+                                                <from>'0'</from>
+                                                <to variable="StockQuoteOperationOut" part="lastmvt"/>
+                                            </copy>
+                                            <copy>
+                                                <from>'0'</from>
+                                                <to variable="StockQuoteOperationOut" part="mrkt"/>
+                                            </copy>
+                                            <copy>
+                                                <from>'0'</from>
+                                                <to variable="StockQuoteOperationOut" part="split"/>
+                                            </copy>
+                                        </assign>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </else>
+        </if>
+        <reply name="Reply1" partnerLink="PartnerLink1" operation="StockQuoteOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/StockQuote/StockQuote" portType="tns:StockQuotePortType" variable="StockQuoteOperationOut"/>
+    </sequence>
+</process>
+
