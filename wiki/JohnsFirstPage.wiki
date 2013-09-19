@@ -11,3 +11,10 @@ Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
+
+"The classic, landmark work on software testing The hardware and software of computing 
+have changed markedly in the three decades since the first edition of The Art of Software 
+Testing, but this book's powerful underlying analysis has stood the test of time." [1]
+
+
+1. GJ Myers, C Sandler, T Badgett - 2011
