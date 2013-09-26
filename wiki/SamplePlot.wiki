@@ -12,7 +12,4 @@ Add your content here.  Format your content with:
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
 
-https://ittqatest.googlecode.com/svn/wiki/plot.png
-
-img title="Map of 2nd floor" src="https://ittqatest.googlecode.com/svn/wiki/plot.png
-" width="700px" height="300px"
+https://ittqatest.googlecode.com/svn/wiki/jb-testing.jpg
