@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ * Grades.C
+ */
 int main(int argc, char** argv) {
   int practical = atoi(argv[0]);
   int exam = atoi(argv[1]);
