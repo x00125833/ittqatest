@@ -5,8 +5,8 @@
  * Grades.C
  */
 int main(int argc, char** argv) {
-  int practical = atoi(argv[0]);
-  int exam = atoi(argv[1]);
+  int practical = atoi(argv[1]);
+  int exam = atoi(argv[2]);
   char grade[100] = "Fail"; 
     if (exam < 40 && practical < 40) {
       fprintf(stderr,"fail\n");  
