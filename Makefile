@@ -1,6 +1,5 @@
 CC=gcc
 CFLAGS=-I.
-DEPS = hellomake.h
 OBJ = Grades.o 
 
 %.o: %.C $(DEPS)
