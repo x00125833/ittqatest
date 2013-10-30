@@ -22,5 +22,5 @@ int main(int argc, char** argv) {
         fprintf(stderr,"Invalid Input\n");  
       }
     }
-  return 0;
+  return 1;
 }
