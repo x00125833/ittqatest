@@ -20,5 +20,5 @@ int main(int argc, char** argv) {
         fprintf(stderr,"Pass with distinction\n");  
       }
     }
-  return 1;
+  return 0;
 }
