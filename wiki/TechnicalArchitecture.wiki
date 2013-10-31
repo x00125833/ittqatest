@@ -20,4 +20,4 @@ Here you will need to discuss the communications layer of your application. For 
 
 = Example Architecture Diagram =
 
-https://ittqatest.googlecode.com/svn/Arch.png
+https://ittqatest.googlecode.com/svn/fcg.png
